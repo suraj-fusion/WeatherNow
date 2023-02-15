@@ -31,9 +31,11 @@ https.get(url,function(response){
            const desc=weatherData.weather[0].description;
            const icon=weatherData.weather[0].icon;
            const imageUrl="http://openweathermap.org/img/wn/"+ icon+"@2x.png";
+           res.write("<body><center>");
            res.write("<p>The weather is currently "+desc+"</p>");
            res.write("<h1>The temprature in "+query+" is "+temp+" degree Celcius </h1>");
-           res.write("<img src="+imageUrl+">");
+           res.write("<img src="+imageUrl+">" );
+           res.write("</center></body>");
            res.send();
           
     });
