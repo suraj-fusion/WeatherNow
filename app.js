@@ -1,6 +1,7 @@
 const express=require("express");
 const https = require("https"); // https is a native node module so we dont install it using npm
 const bodyParser=require("body-parser");
+require('dotenv').config()
 
 const app = express();
 
@@ -14,10 +15,9 @@ app.get("/",function(req,res){
 
 
 app.post("/",function(req,res){
-    
-
+  
 const query=req.body.cityName;
-const apiKey="b9f5b5bc52efacd196f7644f16a96a9e";
+const apiKey=process.env.WEATHER_KEY;
 const unit="metric";
 const url="https://api.openweathermap.org/data/2.5/weather?q="+query+"&appid="+apiKey+"&units="+unit;
 https.get(url,function(response){
