@@ -1,4 +1,4 @@
-# Weather_curr
+# WeatherNow
 This is the 5th Project i made under Angela Yu course
 
 Deployed in vercel
