@@ -5,4 +5,4 @@ It uses Open Weather API for the same
 
 Deployed in vercel
 
-Check it out : https://weather-current.vercel.app/
+Check it out : https://weather---now.vercel.app/
