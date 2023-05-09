@@ -3,11 +3,13 @@ const https = require("https"); // https is a native node module so we dont inst
 const bodyParser=require("body-parser"); //require body-parser for parsing http requests so that we can access submitted form data through req.body
 require('dotenv').config()  //require dotenv 
 const ejs= require('ejs');
-
+var path = require('path'); //requiring path for hosting
 
 const app = express();               //making an app using express
 
 app.set('view engine','ejs');        //setting viewengine as ejs
+
+app.set('views', path.join(__dirname, 'views')); //for hosting
 
 app.use(bodyParser.urlencoded({extended:true})); //setting app to use body parser with extended option to true this means that we can parse complex form data which are js objects with arrays or nested objects
 
