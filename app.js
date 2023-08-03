@@ -29,7 +29,6 @@ const query=req.body.cityName;
 const apiKey=process.env.WEATHER_KEY;
 const unit="metric";
 const url="https://api.openweathermap.org/data/2.5/weather?q="+query+"&appid="+apiKey+"&units="+unit; //the url needs to have strict formatting so full url with https 
-console.log(url);
 https.get(url,function(response){  //making a get request to specified url using https module 
 
     console.log(response.statusCode); // 200 means all ok response was delivered to the client successfully
